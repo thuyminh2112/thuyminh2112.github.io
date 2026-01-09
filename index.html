@@ -1,1 +1,218 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ngoc-Quan Ha-Phan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            background: #ffffff;
+            color: #111;
+        }
+
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        /* Left column */
+        .sidebar {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 10px 0;
+            color: #1a73e8;
+        }
+
+        .links {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .links div {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        /* Right column */
+        .content h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 0;
+            border-bottom: 2px solid #111;
+            padding-bottom: 5px;
+        }
+
+        .content p {
+            font-size: 14.5px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .list {
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+
+        .list strong {
+            font-weight: 600;
+        }
+
+        .entry {
+            margin-bottom: 12px;
+        }
+
+        .location {
+            color: #555;
+            font-size: 13.5px;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                text-align: center;
+            }
+
+            .links {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- LEFT COLUMN -->
+    <div class="sidebar">
+        <img src="profile.jpg" alt="Profile Photo" class="profile-img">
+
+        <div class="name">Ngoc-Quan Ha-Phan</div>
+
+        <div class="links">
+            <div>📧 <a href="mailto:your_email@domain.com">Personal / Work</a></div>
+            <div>🎓 <a href="https://scholar.google.com/" target="_blank">Google Scholar</a></div>
+            <div>📄 <a href="https://www.webofscience.com/" target="_blank">Web of Science</a></div>
+            <div>🆔 <a href="https://orcid.org/" target="_blank">ORCID</a></div>
+            <div>💼 <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></div>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="content">
+
+        <!-- Biography -->
+        <div class="section">
+            <h2>Biography</h2>
+            <p>
+                Ngoc-Quan Ha-Phan is currently pursuing his Master’s degree in the ANDA Lab,
+                Soongsil University, Seoul, South Korea, under the supervision of
+                Prof. Myungsik Yoo. He received his Bachelor of Engineering degree in
+                Automotive Engineering from the Ho Chi Minh City University of Technology
+                and Education, Vietnam, in 2023.
+            </p>
+            <p>
+                His research interests focus on robotics, autonomous vehicles, and vehicle
+                perception systems, with particular attention to driving scene depiction,
+                environment perception, and object-level reasoning for intelligent
+                transportation systems.
+            </p>
+        </div>
+
+        <!-- Research Interests -->
+        <div class="section">
+            <h2>Research Interests</h2>
+            <div class="list">
+                • 3D Scene Understanding<br>
+                • Autonomous Driving and Smart Traffic<br>
+                • Computer Vision<br>
+                • Robotics
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2>Education</h2>
+
+            <div class="entry">
+                <strong>MSc., Electronic Engineering</strong><br>
+                Soongsil University, Seoul City, Korea (2024 – Present)
+            </div>
+
+            <div class="entry">
+                <strong>B.Eng., Automotive Engineering Technology</strong><br>
+                University of Technology and Education (HCMUTE), Ho Chi Minh City, Vietnam (2019 – 2023)
+            </div>
+        </div>
+
+        <!-- Career -->
+        <div class="section">
+            <h2>Career</h2>
+
+            <div class="entry">
+                <strong>Research Assistant</strong> at ANDA Lab<br>
+                <span class="location">Soongsil University, Seoul City, Korea (March 2024 – Present)</span>
+            </div>
+
+            <div class="entry">
+                <strong>Research Collaborator</strong> at DPEE Lab<br>
+                <span class="location">University of Science (HCMUS), Ho Chi Minh City, Vietnam (June 2022 – March 2024)</span>
+            </div>
+
+            <div class="entry">
+                <strong>Research Student</strong> at UTE-AI Lab<br>
+                <span class="location">University of Technology and Education (HCMUTE), Ho Chi Minh City, Vietnam (March 2022 – March 2024)</span>
+            </div>
+
+            <div class="entry">
+                <strong>Software Design Intern</strong> at SoC Software Department<br>
+                <span class="location">Renesas Design Vietnam, Ho Chi Minh City, Vietnam (October 2022 – April 2023)</span>
+            </div>
+
+            <div class="entry">
+                <strong>Embedded Engineer</strong> at Embedded Software Department<br>
+                <span class="location">Ban Vien Corporation, Ho Chi Minh City, Vietnam (August 2023 – January 2024)</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+
