@@ -220,20 +220,53 @@
             <!-- PUBLICATIONS -->
 
             
-        <div class="section" id="publications-section" style="display:none;">
+       <div class="section" id="publications-section" style="display:none;">
             <h2>Publications</h2>
-            <p>
-                <strong>[1]</strong> Author Name, Author Name, <em>Paper title</em>,
-                Journal / Conference, Year. <br>
-                <a href="#">[PDF]</a> <a href="#">[BibTeX]</a>
-            </p>
-            <p>
-                <strong>[2]</strong> Author Name, <em>Paper title</em>,
-                Conference, Year.
-            </p>
+            <div id="pub-list"></div>
       </div>
 </div>
+    
 <script>
+    const publications = [
+      {
+        authors: "Tran, Thi-Thuy-Minh; Vu, Binh-Minh; Shin, Oh-Soon",
+        title: "Optimization of bandwidth allocation and UAV placement in active RIS-assisted UAV communication networks with wireless backhaul",
+        journal: "Drones",
+        year: 2025,
+        url: "https://www.mdpi.com/2504-446X/9/2/111",
+        bibtex: `@article{tran2025optimization,
+          title={Optimization of bandwidth allocation and UAV placement in active RIS-assisted UAV communication networks with wireless backhaul},
+          author={Tran, Thi-Thuy-Minh and Vu, Binh-Minh and Shin, Oh-Soon},
+          journal={Drones},
+          volume={9},
+          number={2},
+          pages={111},
+          year={2025},
+          publisher={MDPI}
+        }`
+      }
+    ];
+    
+    function renderPublications() {
+      const container = document.getElementById("pub-list");
+      container.innerHTML = "";
+    
+      publications.forEach((pub, index) => {
+        const div = document.createElement("p");
+        div.innerHTML = `
+          <strong>[${index + 1}]</strong> ${pub.authors}, 
+          <em>${pub.title}</em>, ${pub.journal}, ${pub.year}.<br>
+          <a href="${pub.url}" target="_blank">[PDF]</a>
+          <a href="#" onclick="showBibtex(${index})">[BibTeX]</a>
+        `;
+        container.appendChild(div);
+      });
+    }
+    
+    function showBibtex(index) {
+      alert(publications[index].bibtex);
+    }
+
     function showProfile() {
         document.getElementById("profile-section").style.display = "block";
         document.getElementById("publications-section").style.display = "none";
@@ -242,6 +275,7 @@
     function showPublications() {
         document.getElementById("profile-section").style.display = "none";
         document.getElementById("publications-section").style.display = "block";
+        renderPublications();
     }
 </script>
 
