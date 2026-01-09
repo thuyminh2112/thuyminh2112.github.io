@@ -1,1 +1,235 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tran Thi Thuy Minh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            background: #ffffff;
+            color: #111;
+        }
+
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= NAV BAR ================= */
+        .top-nav {
+            width: 100%;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 40px;
+            box-sizing: border-box;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a73e8;
+        }
+
+        .nav-links a {
+            margin-left: 25px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .nav-links a:hover {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        /* ================= MAIN LAYOUT ================= */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        /* ================= SIDEBAR ================= */
+        .sidebar {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a73e8;
+            margin: 10px 0;
+        }
+
+        .role {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .links {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .links div {
+            margin-bottom: 10px;
+        }
+
+        /* ================= CONTENT ================= */
+        .content h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 0;
+            border-bottom: 2px solid #111;
+            padding-bottom: 6px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .content p {
+            font-size: 14.5px;
+            line-height: 1.65;
+            text-align: justify;
+        }
+
+        .list {
+            font-size: 14.5px;
+            line-height: 1.65;
+        }
+
+        .entry {
+            margin-bottom: 14px;
+        }
+
+        .entry strong {
+            font-weight: 600;
+        }
+
+        .location {
+            font-size: 13.5px;
+            color: #555;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                text-align: center;
+            }
+
+            .links {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAV BAR ================= -->
+<nav class="top-nav">
+    <div class="nav-title">Tran Thi Thuy Minh</div>
+    <div class="nav-links">
+        <a href="#profile">Profile</a>
+        <a href="#publications">Publications</a>
+    </div>
+</nav>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="container">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+        <img src="profile.jpg" alt="Profile Photo" class="profile-img">
+
+        <div class="name">Tran Thi Thuy Minh</div>
+
+        <div class="links">
+            <div>📧 <a href="mailto:tranthuyminh0109@gmail.com">Email</a></div>
+            <div>🎓 <a href="https://scholar.google.com/" target="_blank">Google Scholar</a></div>
+            <div>💼 <a href="https://www.linkedin.com/" target="https://www.linkedin.com/in/tran-thi-thuy-minh-sora-0a4151343/">LinkedIn</a></div>
+        </div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="content">
+
+        <!-- PROFILE -->
+        <div class="section" id="profile">
+            <h2>Biography</h2>
+            <p>
+                Tran Thi Thuy Minh is currently pursuing a Master’s degree in Information and Telecommunication Engineering at the Wireless Communication Laboratory, Soongsil University, Seoul, South Korea.
+                In 2023, Minh received her Bachelor's degree as the valedictorian in Electronics and Telecommunications from Hanoi University of Industry, Vietnam.
+            </p>
+        </div>
+
+
+        <div class="section">
+            <h2>Education</h2>
+            <div class="educatio-item">
+                <div class="edu-date">2024/02 - 2026/02</div>
+                <div class="edu-info"> 
+                  M.S. in Information and Telecommunication Engineering<br>
+                  Soongsil University, Seoul, Korea
+            </div>
+             <div class="educatio-item">
+                <div class="edu-date">2019/09 - 2023/04</div>
+                <div class="edu-info"> 
+                  Bachelor of Electronics and Telecommunication<br>
+                 Hanoi University of Industry, Vietnam
+            </div>
+        </div>
+
+        <!-- PUBLICATIONS -->
+        <div class="section" id="publications">
+            <h2>Publications</h2>
+            <p>
+                <strong>[1]</strong> Author Name, Author Name, <em>Paper title</em>,
+                Journal / Conference, Year. <br>
+                <a href="#">[PDF]</a> <a href="#">[BibTeX]</a>
+            </p>
+            <p>
+                <strong>[2]</strong> Author Name, <em>Paper title</em>,
+                Conference, Year.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
+
