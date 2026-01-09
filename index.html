@@ -163,8 +163,8 @@
 <nav class="top-nav">
     <div class="nav-title">Tran Thi Thuy Minh</div>
     <div class="nav-links">
-        <a href="#profile">Profile</a>
-        <a href="#publications">Publications</a>
+        <a href="#" onclick="showProfile()">Profile</a>
+        <a href="#" onclick="showPublications()">Publications</a>
     </div>
 </nav>
 
@@ -186,35 +186,36 @@
 
     <!-- RIGHT CONTENT -->
     <div class="content">
-
+        
+        <div id="profile-section">
         <!-- PROFILE -->
-        <div class="section" id="profile">
-            <h2>Biography</h2>
-            <p>
-                Tran Thi Thuy Minh is currently pursuing a Master’s degree in Information and Telecommunication Engineering at the Wireless Communication Laboratory, Soongsil University, Seoul, South Korea.
-                In 2023, Minh received her Bachelor's degree as the valedictorian in Electronics and Telecommunications from Hanoi University of Industry, Vietnam.
-            </p>
-        </div>
-
-
-        <div class="section">
-            <h2>Education</h2>
-            <div class="educatio-item">
-                <div class="edu-date">2024/02 - 2026/02</div>
-                <div class="edu-info"> 
-                  M.S. in Information and Telecommunication Engineering<br>
-                  Soongsil University, Seoul, Korea
+            <div class="section">
+                <h2>Biography</h2>
+                <p>
+                    Tran Thi Thuy Minh is currently pursuing a Master’s degree in Information and Telecommunication Engineering at the Wireless Communication Laboratory, Soongsil University, Seoul, South Korea.
+                    In 2023, Minh received her Bachelor's degree as the valedictorian in Electronics and Telecommunications from Hanoi University of Industry, Vietnam.
+                </p>
             </div>
-             <div class="educatio-item">
-                <div class="edu-date">2019/09 - 2023/04</div>
-                <div class="edu-info"> 
-                  Bachelor of Electronics and Telecommunication<br>
-                 Hanoi University of Industry, Vietnam
+    
+    
+            <div class="section">
+                <h2>Education</h2>
+                <div class="educatio-item">
+                    <div class="edu-date">2024/02 - 2026/02</div>
+                    <div class="edu-info"> 
+                      M.S. in Information and Telecommunication Engineering<br>
+                      Soongsil University, Seoul, Korea
+                </div>
+                 <div class="educatio-item">
+                    <div class="edu-date">2019/09 - 2023/04</div>
+                    <div class="edu-info"> 
+                      Bachelor of Electronics and Telecommunication<br>
+                     Hanoi University of Industry, Vietnam
+                </div>
             </div>
-        </div>
-
-        <!-- PUBLICATIONS -->
-        <div class="section" id="publications">
+        <div>
+            <!-- PUBLICATIONS -->
+        <div class="section" id="publications-section" style="display:non;">
             <h2>Publications</h2>
             <p>
                 <strong>[1]</strong> Author Name, Author Name, <em>Paper title</em>,
@@ -226,9 +227,19 @@
                 Conference, Year.
             </p>
         </div>
-
     </div>
 </div>
+<script>
+    function showProfile() {
+        document.getElementById("profile-section").style.display = "block";
+        document.getElementById("publications-section").style.display = "none";
+    }
+
+    function showPublications() {
+        document.getElementById("profile-section").style.display = "none";
+        document.getElementById("publications-section").style.display = "block";
+    }
+</script>
 
 </body>
 </html>
