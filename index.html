@@ -295,7 +295,38 @@
           year={2025},
           publisher={MDPI}
         }`
-      }
+      }, 
+        {
+        authors: "Dang, Xuan-Toan; Vu, Binh-Minh; Nguyen, Quynh-Suong; Tran, Thi-Thuy-Minh; Eom, Joon-Soo; Shin, Oh-Soon",
+        title: "A survey on energy-efficient design for federated learning over wireless networks",
+        journal: "Energies",
+        year: 2024,
+        url: "https://www.mdpi.com/1996-1073/17/24/6485",
+        bibtex: `@article{dang2024survey,
+          title={A survey on energy-efficient design for federated learning over wireless networks},
+          author={Dang, Xuan-Toan and Vu, Binh-Minh and Nguyen, Quynh-Suong and Tran, Thi-Thuy-Minh and Eom, Joon-Soo and Shin, Oh-Soon},
+          journal={Energies},
+          volume={17},
+          number={24},
+          pages={6485},
+          year={2024},
+          publisher={MDPI}
+        }`
+      }, 
+        {
+      authors: "Tran, Thi-Thuy-Minh; Shin, Oh-Soon",
+      title: "Hybrid RIS-assisted UAV Networks with Wireless Backhaul",
+      journal: "Proceedings of the Korean Institute of Communications and Information Sciences (KICS)",
+      year: 2024,
+      url: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12034616", // nếu chưa có link PDF, để trống
+      bibtex: `@article{tran2024hybrid,
+        title={Hybrid RIS-assisted UAV Networks with Wireless Backhaul},
+        author={Tran, Thi Thuy Minh and Shin, Oh-Soon},
+        journal={한국통신학회 학술대회논문집},
+        pages={235--236},
+        year={2024}
+      }`
+    }
     ];
     
     function renderPublications() {
@@ -303,16 +334,22 @@
       container.innerHTML = "";
     
       publications.forEach((pub, index) => {
+        // In đậm tên của bạn
+        const boldAuthors = pub.authors.replace(
+          "Tran, Thi-Thuy-Minh",
+          "<strong>Tran, Thi-Thuy-Minh</strong>"
+        );
+    
         const div = document.createElement("p");
         div.innerHTML = `
-          <strong>[${index + 1}]</strong> ${pub.authors}, 
+          <strong>[${index + 1}]</strong> ${boldAuthors}, 
           <em>${pub.title}</em>, ${pub.journal}, ${pub.year}.<br>
           <a href="${pub.url}" target="_blank">[PDF]</a>
           <a href="#" onclick="showBibtex(${index})">[BibTeX]</a>
         `;
         container.appendChild(div);
       });
-    }
+}
     
     function showBibtex(index) {
       alert(publications[index].bibtex);
